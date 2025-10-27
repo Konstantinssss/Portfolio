@@ -1,3 +1,5 @@
+import time
+
 from pages.tutu import Tutu
 import pytest
 
@@ -5,3 +7,4 @@ import pytest
 def test_tutu(browser):
     tutu_page = Tutu(browser)
     tutu_page.visit()
+    time.sleep(5)
