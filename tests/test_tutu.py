@@ -9,4 +9,4 @@ def test_tutu(browser):
     tutu_page = Tutu(browser)
     tutu_page.visit()
     time.sleep(5)
-    tutu_page.btn_burger_menu.click()
+    tutu_page.btn_burger_menu.click_force()
