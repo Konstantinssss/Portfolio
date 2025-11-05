@@ -16,3 +16,19 @@ class BasePage:
         if self.get_url() == self.base_url:
             return True
         return False
+
+    def back(self):
+        self.driver.back()
+    def forward(self):
+        self.driver.forward()
+    def refresh(self):
+        self.driver.refresh()
+    def get_title(self):
+        return self.driver.title
+
+    def alert(self):
+        try:
+            return self.driver.switch_to.alert
+        except Exception as ex:
+            logging.log(1, ex)
+            return False

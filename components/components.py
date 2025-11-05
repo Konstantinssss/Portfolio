@@ -55,11 +55,14 @@ class WebElement:
     def check_css(self, style, value=''):
         return self.find_element().value_of_css_property(style) == value
 
+
     def scroll_to_element(self):
         self.driver.execute_script(
-            "window.scrollTo(0, document.body.scrollHeight);",
+            "arguments[0].scrollIntoView({behavior: 'smooth', block: 'start'});",
             self.find_element()
         )
+
+
     def get_by_type(self):
         if self.locator_type == "id":
             return By.ID
