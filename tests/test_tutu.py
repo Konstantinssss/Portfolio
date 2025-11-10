@@ -10,6 +10,7 @@ def test_tutu(browser):
     tutu_page.visit()
     tutu_page.mail_form.scroll_to_element()
 
+
     tutu_page.mail_field.send_keys('mm.mail')
     tutu_page.checkbox_agree_personal_data.click()
     tutu_page.btn_subscribe.click()
